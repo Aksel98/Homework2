@@ -20,7 +20,7 @@ function getEachEvenDigitNumbers(number1, number2) {
     return arr.length > 0 ? arr.join(', ') : 'Such numbers does not exist.'
 }
 
-// 3
+// 3s
 function getSortingViolatedNumber(numbers) {
     let violatedIndex = 0;
     for (let i = 0; i < numbers.length - 1; i++) {
