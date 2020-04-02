@@ -12,12 +12,27 @@ function getBiggerNumbersThanMarked(numbers, number) {
 // 2
 function getEachEvenDigitNumbers(number1, number2) {
     let arr = [];
+    let arr1 = [];
+
     for (let i = number1; i <= number2; i++) {
-        if (i % 2 === 0 && i.toString()[0] % 2 === 0) {
-            arr.push(i)
+        if (i % 2 === 0) {
+            arr.push(i.toString())
         }
     }
-    return arr.length > 0 ? arr.join(', ') : 'Such numbers does not exist.'
+
+    for (let i = 0; i <= arr.length - 1; i++) {
+        let condition = true;
+        for (let k = 0; k <= arr[i].length - 1; k++) {
+            if (arr[i][k] % 2 !== 0) {
+                condition = false;
+                break
+            }
+        }
+        if (condition) {
+            arr1.push(arr[i])
+        }
+    }
+    return arr.length > 0 ? arr1.join(', ') : 'Such numbers does not exist.'
 }
 
 // 3
