@@ -67,7 +67,6 @@ function getCountOfMissingNumbers(numbers) {
     for (let i = 0; i < numbers.length - 1; i++) {
         if (numbers[i + 1] - numbers[i] !== 1) {
             count += (numbers[i + 1] - numbers[i]) - 1;
-            console.log(count)
         }
     }
     return count
